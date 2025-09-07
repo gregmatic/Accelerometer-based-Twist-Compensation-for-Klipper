@@ -10,3 +10,6 @@ Uses accelerometer readings at various points on an axis of motion and derives t
 3. [PCA](https://en.wikipedia.org/wiki/Principal_component_analysis) reliably identifies the rotation axis automatically, even if the device starts at an arbitrary orientation. PCA works purely on relative changes in the accelerometer vectors, so the initial orientation is irrelevant. We can mount the accelerometer in any orientation we like on the toolhead, using common sense of course. 
 
 4. We then project the 3D accelerometer vectors onto the plane perpendicular to the rotation axis, thereby removing any component along the rotation axis. In this projected 2D plane, the vectors fully represent the rotation only. The change in rotation, $\delta \theta$, is consistently detected by comparing n = atan2(x<sub>n</sub>', y<sub>n</sub>') where x', y' are the projected vectors.
+
+Continuous data capture during 20mm/s movement (low signal/noise)
+<img width="1000" height="500" alt="20mms_moving" src="https://github.com/user-attachments/assets/5cf3e8e6-f662-47f6-8da1-b9be65224f0e" />
